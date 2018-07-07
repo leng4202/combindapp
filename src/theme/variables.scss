@@ -39,14 +39,14 @@ $colors: (
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222,
-  lightbutton: #ff80ff
+  lightbutton: #000000
 );
 
 // All
-$tabs-background:color($colors,lightbutton);
-$tabs-tab-color-inactive: color($colors,secondary);
+$tabs-background:color($colors,dark);
+$tabs-tab-color-inactive: color($colors,dark);
 $tabs-tab-color-active: color($colors,danger);
-$toolbar-background:color($colors,secondary);
+$toolbar-background:color($colors,dark);
 
 // App iOS Variables
 // --------------------------------------------------

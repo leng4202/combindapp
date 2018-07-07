@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ลงทะเบียน</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p text-right>
+    <button ion-button round outline small color="primary" (click)="gotoDashboard()">เอาไว้ก่อน</button>
+  </p>
+  <h1 text-center>ลงทะเบียนฟรี</h1>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>ชื่อ-สกุล</ion-label>
+      <ion-input type="text" [(ngModel)] ="userData.fullname" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>อีเมล์</ion-label>
+      <ion-input type="text" [(ngModel)] ="userData.email" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>โทรศัพท์</ion-label>
+      <ion-input type="text" [(ngModel)] ="userData.tel" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>ชื่อผู้ใช้ (Username)</ion-label>
+      <ion-input type="text" [(ngModel)] ="userData.username"></ion-input>
+    </ion-item>
+
+    <ion-item> 
+      <ion-label floating>รหัสผ่าน</ion-label>
+      <ion-input type="password" [(ngModel)] ="userData.password" ></ion-input>
+    </ion-item>
+
+  </ion-list>
+  <button ion-button block color="primary" (click)="signup()">ลงทะเบียน</button>
+  <p text-center>เป็นสมาชิกอยู่แล้ว ?<br>
+    <button ion-button round outline small color="primary" (click)="login()">เข้าระบบ</button>
+  </p>
+
+
+</ion-content>

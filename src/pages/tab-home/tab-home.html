@@ -1,32 +1,115 @@
 
 <ion-header>
 
-    <ion-navbar>
-     <button ion-button menuToggle="left" left>
-        <ion-icon name="menu"></ion-icon>
-        <ion-title>หน้าแรก</ion-title>
-     </button>
-      
-    </ion-navbar>
-  
-  </ion-header> 
+  <ion-toolbar>
+
+    <button ion-button menuToggle="left" class="menutg" left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>Home</ion-title>
+
+    <ion-buttons right>
+        <button ion-button icon-only color="royal">
+            <ion-icon name="search"></ion-icon>
+        </button>
+        <span *ngIf="loginStatus == true">
+        <button ion-button icon-only color="royal" (click)="register()">
+            <ion-icon name="person-add"></ion-icon>
+        </button>
+        <button ion-button icon-only color="royal" (click)="login()">
+            <ion-icon name="lock"></ion-icon>
+        </button>
+      </span>
+        <button ion-button icon-only color="white">
+            <ion-icon name="more"></ion-icon>
+          </button>
+    </ion-buttons>
+
+    <!-- <button ion-button menuToggle="right" class="menutg" right>
+      <ion-icon name="menu"></ion-icon>
+    </button> -->
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="row b_top">
+    <div class="b_top_content">
+      <img src="assets/imgs/profile.jpg" alt="">
+      <div class="box-c-right" style="color:#fff">
+        <h2>Good Morning...</h2>
+         <p>{{userDetail.fullname}}</p>  
+        <button ion-button color="dark" round  (click)="logout()" *ngIf="loginStatus==false">Logout</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col box-cq">
+      <ion-icon name="appstore"></ion-icon>
+      MENU 1
+    </div>
+    <div class="col box-cq">
+      <ion-icon name="compass"></ion-icon>
+      MENU 2
+    </div>
+    <div class="col box-cq">
+      <ion-icon name="sunny"></ion-icon>
+      MENU 3
+    </div>
+  </div>
+  <div class="row">
+    <div class="col box-cq">
+      <ion-icon name="map"></ion-icon>
+      MENU 4
+    </div>
+    <div class="col box-cq">
+      <ion-icon name="cube"></ion-icon>
+      MENU 5
+    </div>
+    <div class="col box-cq">
+      <ion-icon name="analytics"></ion-icon>
+      MENU 6
+    </div>
+  </div>
 
 
+  <div class="row">
+    <div class="col box-cq">
+      <ion-icon name="browsers"></ion-icon>
+      MENU 7
+    </div>
+    <div class="col box-cq">
+      <ion-icon name="send"></ion-icon>
+      MENU 8
+    </div>
+    <div class="col box-cq">
+      <ion-icon name="notifications"></ion-icon>
+      MENU 9
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="col box-cq">
+      <ion-icon name="camera"></ion-icon>
+      MENU 10
+    </div>
+    <div class="col box-cq">
+      <ion-icon name="barcode"></ion-icon>
+      MENU 11
+    </div>
+    <div class="col box-cq">
+      <ion-icon name="cloud"></ion-icon>
+      MENU 12
+    </div>
+  </div>
 
-<ion-content padding>
-      <ion-slides>
-
-          <ion-slide>
-              <img src="../../assets/imgs/logo.png" alt="">
-            </ion-slide>
-            <ion-slide>
-                <img src="../../assets/imgs/CanvasDemo.png" alt="">
-            </ion-slide>
-            <ion-slide>
-                <img src="../../assets/imgs/76426.jpg" alt="">
-            </ion-slide>
-
-
-      </ion-slides>
+  <div class="row box-cf">
+    MENU 13
+  </div>
+  <div class="row box-cf">
+    MENU 14
+  </div>
 </ion-content>
+
