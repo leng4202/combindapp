@@ -15,11 +15,14 @@ export class TabHomePage {
 
   userDetail: any;
   loginStatus: boolean;
+  getTokenKey:any;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     public app: App,
+     
   ) {
+    this.getTokenKey = localStorage.getItem('token_key');
     const data = JSON.parse(localStorage.getItem('userData'));
     if (data == null) {
       this.userDetail = { fullname: 'Your are guest' };

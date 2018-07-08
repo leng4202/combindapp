@@ -1,0 +1,41 @@
+<ion-header>
+
+
+  <ion-navbar>
+    <button ion-button menuToggle="left" left>
+      <ion-icon name="menu"></ion-icon>
+      <ion-title>ควยกับเราครับ</ion-title>
+    </button>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div id="chatMessages">
+    <div *ngFor="let message of messages" [class]="message.specialMessage ? 'message special' : 'message'">
+      <div [class]="message.username == fullname ? 'username usernameRight' : ' username usernameLeft'">{{ message.username }}</div>
+      <div [class]="message.username == fullname ? 'innerMessage messageRight' : 'innerMessage messageLeft'">
+        <div class="messageContent">{{ message.message }}</div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+      <div id="footer">
+        <div class="elem">
+          <ion-input type="text" [(ngModel)]="message" (keyup.enter)="sendMessage()"></ion-input>
+        </div>
+        <div class="elem">
+          <button ion-button icon-only (click)="sendMessage()">
+            <ion-icon name="send"></ion-icon>
+          </button>
+        </div>
+      </div>
+    </ion-toolbar>
+   </ion-footer>
+   

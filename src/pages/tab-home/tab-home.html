@@ -42,6 +42,7 @@
         <h2>Good Morning...</h2>
          <p>{{userDetail.fullname}}</p>  
         <button ion-button color="dark" round  (click)="logout()" *ngIf="loginStatus==false">Logout</button>
+        
       </div>
     </div>
   </div>
@@ -106,7 +107,8 @@
   </div>
 
   <div class="row box-cf">
-    MENU 13
+    <input type="text" name="" value=" {{getTokenKey}}" id="">
+   
   </div>
   <div class="row box-cf">
     MENU 14

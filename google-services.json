@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "462299023666",
+    "firebase_url": "https://robert-combindapppush.firebaseio.com",
+    "project_id": "robert-combindapppush",
+    "storage_bucket": "robert-combindapppush.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462299023666:android:4415780cce447e10",
+        "android_client_info": {
+          "package_name": "com.leng.combind2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462299023666-41lg1mcshsr71i7cp1db8d9942gjvvno.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4PHsirWA4TUPTygQV11erP9Oc1TuotCc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

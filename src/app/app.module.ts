@@ -21,6 +21,31 @@ import { LoginPage } from '../pages/login/login';
 import { WebapiServiceProvider } from '../providers/webapi-service/webapi-service';
 import { HttpModule } from '@angular/http';
 import { GlobalProvider } from '../providers/global/global';
+import { CoursedetailPage } from '../pages/coursedetail/coursedetail';
+import { TabChatPage } from '../pages/tab-chat/tab-chat';
+
+//module firebase
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+//module sound
+import { NativeAudio } from '@ionic-native/native-audio';
+
+//module notification
+import { FCM } from '@ionic-native/fcm';
+import { ShowpushdetailPage } from '../pages/showpushdetail/showpushdetail';
+
+
+
+var config = {
+  apiKey: "AIzaSyCs0iWG2Ed9oeobPY1g1MTx0dAdo7Y6Ebw",
+  authDomain: "robert-combindchatapp.firebaseapp.com",
+  databaseURL: "https://robert-combindchatapp.firebaseio.com",
+  projectId: "robert-combindchatapp",
+  storageBucket: "robert-combindchatapp.appspot.com",
+  messagingSenderId: "728466710287"
+};
+
 
 @NgModule({
   declarations: [
@@ -37,11 +62,16 @@ import { GlobalProvider } from '../providers/global/global';
     TabsPage,
     RegisterPage,
     LoginPage,
+    CoursedetailPage,
+    TabChatPage,
+    ShowpushdetailPage,
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpModule,
+    AngularFireModule.initializeApp(config),
+    AngularFireDatabaseModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -58,13 +88,18 @@ import { GlobalProvider } from '../providers/global/global';
     TabsPage,
     RegisterPage,
     LoginPage,
+    CoursedetailPage,
+    TabChatPage,
+    ShowpushdetailPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     WebapiServiceProvider,
-    GlobalProvider
+    GlobalProvider,
+    NativeAudio,
+    FCM,
   ]
 })
 export class AppModule {}

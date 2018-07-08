@@ -5,6 +5,7 @@ import { TabContactPage } from '../tab-contact/tab-contact';
 import { TabCoursePage } from '../tab-course/tab-course';
 import { TabHomePage } from '../tab-home/tab-home';
 import { TabServicePage } from '../tab-service/tab-service';
+import { TabChatPage } from '../tab-chat/tab-chat';
 
 @IonicPage()
 @Component({ 
@@ -18,6 +19,7 @@ export class TabsPage {
   tab3:any = TabServicePage;
   tab4:any = TabArticlePage;
   tab5:any = TabContactPage;
+  tab6:any = TabChatPage;
   
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
